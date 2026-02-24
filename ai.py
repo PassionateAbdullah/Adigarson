@@ -380,58 +380,58 @@ We'll be in touch shortly to confirm your pickup time. Have a great day! 🚚✨
     
 
 
-def run_chatbot(dataset_path: str = "data.json"):
-    """
-    Run interactive chatbot with structured conversation flow.
-    Guides user through service selection → items → locations → vehicle → estimate → booking.
-    """
-    print("\n" + "="*75)
-    print("🤖 DIGAXY ASSISTANT - Your Moving & Delivery Expert")
-    print("Type 'exit' to leave | 'restart' to start over")
-    print("="*75 + "\n")
+# def run_chatbot(dataset_path: str = "data.json"):
+#     """
+#     Run interactive chatbot with structured conversation flow.
+#     Guides user through service selection → items → locations → vehicle → estimate → booking.
+#     """
+#     print("\n" + "="*75)
+#     print("🤖 DIGAXY ASSISTANT - Your Moving & Delivery Expert")
+#     print("Type 'exit' to leave | 'restart' to start over")
+#     print("="*75 + "\n")
     
-    dataset = load_dataset(dataset_path)
-    conversation = ConversationManager()
+#     dataset = load_dataset(dataset_path)
+#     conversation = ConversationManager()
     
-    while True:
-        try:
-            user_input = input("You: ").strip()
+#     while True:
+#         try:
+#             user_input = input("You: ").strip()
             
-            # Exit commands
-            if user_input.lower() in ["exit", "quit"]:
-                print("\nAssistant: Thanks for choosing Digaxy! Have a great day! 👋\n")
-                break
+#             # Exit commands
+#             if user_input.lower() in ["exit", "quit"]:
+#                 print("\nAssistant: Thanks for choosing Digaxy! Have a great day! 👋\n")
+#                 break
             
-            # Restart conversation
-            if user_input.lower() == "restart":
-                conversation.reset()
-                print("\nAssistant: Let's start fresh! 👋 What can I help you with?\n")
-                continue
+#             # Restart conversation
+#             if user_input.lower() == "restart":
+#                 conversation.reset()
+#                 print("\nAssistant: Let's start fresh! 👋 What can I help you with?\n")
+#                 continue
             
-            # Skip empty
-            if not user_input:
-                continue
+#             # Skip empty
+#             if not user_input:
+#                 continue
             
-            # Get response based on state
-            result = get_next_response(user_input, conversation, dataset)
-            print(f"\nAssistant: {result['reply']}\n")
+#             # Get response based on state
+#             result = get_next_response(user_input, conversation, dataset)
+#             print(f"\nAssistant: {result['reply']}\n")
             
-            if result.get("follow_up"):
-                print("💡 Hint:")
-                for hint in result["follow_up"]:
-                    print(f"   {hint}")
-                print()
+#             if result.get("follow_up"):
+#                 print("💡 Hint:")
+#                 for hint in result["follow_up"]:
+#                     print(f"   {hint}")
+#                 print()
         
-        except KeyboardInterrupt:
-            print("\n\nAssistant: Thanks for reaching out! Have a great day! 👋\n")
-            break
-        except EOFError:
-            print("\n\nAssistant: Thanks for reaching out! Have a great day! 👋\n")
-            break
-        except Exception as e:
-            # Don't print error, just continue
-            continue
+#         except KeyboardInterrupt:
+#             print("\n\nAssistant: Thanks for reaching out! Have a great day! 👋\n")
+#             break
+#         except EOFError:
+#             print("\n\nAssistant: Thanks for reaching out! Have a great day! 👋\n")
+#             break
+#         except Exception as e:
+#             # Don't print error, just continue
+#             continue
 
 
-if __name__ == "__main__":
-    run_chatbot()
+# if __name__ == "__main__":
+#     run_chatbot()
