@@ -1,0 +1,119 @@
+
+{
+"items": [
+    {
+      "id": "greeting_001",
+      "questions": ["hi", "hello", "hey", "start", "help", "can you help", "need help"],
+      "answer": "Hi there 👋 I’m Digaxy Assistant. How can I help today — moving, delivery, donation pickup, or an estimate (vehicle + distance)?",
+      "tags": ["greeting"]
+    },
+    {
+      "id": "overview_001",
+      "questions": ["what is digaxy", "tell me about digaxy", "what do you do", "what services do you provide"],
+      "answer": "Digaxy helps with moving and logistics services like Home Move, Apartment Move, Office Move, Furniture Delivery, and Donation Pickup. You can also get an instant estimate by entering pickup and drop-off locations, then selecting a vehicle.",
+      "tags": ["overview", "services"]
+    },
+    {
+      "id": "services_001",
+      "questions": ["services", "what services", "home move", "apartment move", "college move", "office move", "furniture delivery", "donation pickup", "commercial moving"],
+      "answer": "Available services include: Home Move, Apartment Move, College Move, Office Move, Furniture Delivery, and Donation Pickup. Commercial moving and retailer deliveries may be available depending on your city coverage.",
+      "tags": ["services"]
+    },
+    {
+      "id": "howitworks_001",
+      "questions": ["how does it work", "how to book", "booking process", "get started"],
+      "answer": "Simple flow: select your pickup & drop-off, choose your truck/vehicle, then track your driver live with real-time updates during the move/delivery.",
+      "tags": ["how_it_works"]
+    },
+    {
+      "id": "tracking_001",
+      "questions": ["track", "live tracking", "can i track the driver", "track my move"],
+      "answer": "Yes — Digaxy supports live tracking so you can track your driver and get real-time updates.",
+      "tags": ["tracking"]
+    },
+    {
+      "id": "hours_001",
+      "questions": ["hours", "working hours", "open", "when are you available", "available today"],
+      "answer": "Digaxy operates 7 days a week from 7AM–10PM. Availability may vary by city.",
+      "tags": ["hours", "availability"]
+    },
+    {
+      "id": "estimate_001",
+      "questions": ["estimate", "get price", "price", "how much", "instant estimate"],
+      "answer": "To get an instant estimate, share your pickup and drop-off locations and your vehicle type. The estimate is calculated using base fare + travel price (distance) + handling fee (load/unload effort). Taxes are included.",
+      "tags": ["estimate", "pricing"],
+      "follow_up": [
+        "What’s your pickup location (city/address)?",
+        "What’s your drop-off location (city/address)?",
+        "Which vehicle do you want: Pickup, Van, Minibox, or Bigbox?",
+        "Are there heavy items or stairs (for handling)?"
+      ]
+    },
+    {
+      "id": "pricing_breakdown_001",
+      "questions": ["how is pricing calculated", "calculate cost", "base fare", "travel price", "handling fee", "why price changes", "tax included"],
+      "answer": "Digaxy’s estimate is shown as: Base fare + Travel price (based on route distance) + Handling fee (load & unload effort). The estimate is non-binding — the final price is calculated based on real-time activity tracking during the move. Taxes are included.",
+      "tags": ["pricing", "estimate", "fees"]
+    },
+    {
+      "id": "vehicles_001",
+      "questions": ["vehicle types", "truck options", "what vehicles", "which truck should i choose"],
+      "answer": "Vehicle options shown in the app include: Pickup, Van, Minibox, and Bigbox. If you tell me what you’re moving (boxes, furniture, appliances, full apartment), I’ll suggest the best fit.",
+      "tags": ["vehicles"]
+    },
+    {
+      "id": "vehicle_rates_001",
+      "questions": ["pickup price", "van price", "minibox price", "bigbox price", "starting price", "base price per vehicle"],
+      "answer": "From the vehicle selection screen: Pickup ≈ $42.92 + $1.62 per labor min, Van ≈ $77 + $2.02 per labor min, Minibox ≈ $144.51 + $2.3 per labor min, Bigbox ≈ $230 + $4.99 per labor min. (These are the UI-listed starting rates.)",
+      "tags": ["pricing", "vehicles"]
+    },
+    {
+      "id": "distance_pricing_001",
+      "questions": ["distance affect price", "based on distance", "per km", "per mile", "travel cost"],
+      "answer": "Yes — travel price is calculated from the route distance (pickup → drop-off). Your total estimate combines base fare + distance travel price + handling fee, with taxes included.",
+      "tags": ["pricing", "distance"]
+    },
+    {
+      "id": "nonbinding_001",
+      "questions": ["is the estimate final", "binding", "final price change", "non binding"],
+      "answer": "The estimate is non-binding. The final price is calculated based on real-time activity tracking during the move. Taxes are included in the estimate display.",
+      "tags": ["pricing", "estimate"]
+    },
+    {
+      "id": "donation_001",
+      "questions": ["donation pickup", "pick up donations", "donate items"],
+      "answer": "Yes — Donation Pickup lets you schedule a pickup and send items to a donation center.",
+      "tags": ["services", "donation"]
+    },
+    {
+      "id": "retailer_001",
+      "questions": ["retailer deliveries", "store delivery", "deliver my store purchase"],
+      "answer": "Digaxy supports retailer deliveries — delivering store purchases straight to your doorstep (availability depends on your city coverage).",
+      "tags": ["services", "delivery"]
+    },
+    {
+      "id": "office_001",
+      "questions": ["office move", "commercial moving", "business relocation"],
+      "answer": "Digaxy supports office moves and commercial moving with professional labor for business moves.",
+      "tags": ["services", "commercial"]
+    },
+    {
+      "id": "partner_001",
+      "questions": ["become a partner", "become a driver", "work with digaxy", "join as partner"],
+      "answer": "You can become a Digaxy Partner to join moving & delivery jobs in your city. Partner highlights shown: fast payouts (weekly), flexible schedule, smart job matching with nearby jobs, and premium tasks for higher earnings.",
+      "tags": ["partner", "jobs"]
+    },
+    {
+      "id": "support_001",
+      "questions": ["support", "contact", "help center", "how to reach you"],
+      "answer": "If you need support, use the Help/Contact options in the Digaxy app or website. Tell me what issue you’re facing (booking, estimate, tracking, payment), and I’ll guide you.",
+      "tags": ["support"]
+    },
+    {
+      "id": "fallback_001",
+      "questions": ["__fallback__"],
+      "answer": "I can help with Digaxy services, booking flow, and estimates. Are you asking about (1) a service, (2) how booking works, or (3) an estimate? If it’s an estimate, tell me pickup, drop-off, and vehicle type.",
+      "tags": ["fallback"]
+    }
+  ]
+}
