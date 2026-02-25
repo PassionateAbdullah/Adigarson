@@ -80,24 +80,24 @@ def run_digaxy_ai(user_input: str, session_state: Dict[str, Any]) -> Tuple[str, 
         print(f"Error logic: {e}")
         return "I'm sorry, I'm having trouble processing your request. Please try again.", session_state
 
-# --- TEST RUNNER (How your Backend calls it) ---
+# # --- TEST RUNNER (How your Backend calls it) ---
 
-if __name__ == "__main__":
-    # INITIAL STATE (This would be stored in your Database/Redis)
-    session = {
-        "fields": {}, 
-        "calculation": None, 
-        "status": "collecting"
-    }
+# if __name__ == "__main__":
+#     # INITIAL STATE (This would be stored in your Database/Redis)
+#     session = {
+#         "fields": {}, 
+#         "calculation": None, 
+#         "status": "collecting"
+#     }
     
-    print("🚀 Digaxy AI Engine Online")
+#     print("🚀 Digaxy AI Engine Online")
     
-    while True:
-        user_in = input("\nYou: ")
-        if user_in.lower() in ["exit", "quit"]: break
+#     while True:
+#         user_in = input("\nYou: ")
+#         if user_in.lower() in ["exit", "quit"]: break
         
-        # The single call
-        reply, session = run_digaxy_ai(user_in, session)
+#         # The single call
+#         reply, session = run_digaxy_ai(user_in, session)
         
-        print(f"\nAssistant: {reply}")
-        # print(f"\n[DEBUG STATE]: {json.dumps(session['fields'], indent=2)}")
+#         print(f"\nAssistant: {reply}")
+#         # print(f"\n[DEBUG STATE]: {json.dumps(session['fields'], indent=2)}")
