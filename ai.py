@@ -10,7 +10,7 @@ load_dotenv()
 
 def run_digaxy_ai(user_input: str, session_state: Dict[str, Any]) -> Tuple[str, Dict[str, Any]]:
     """
-    Conversational moving estimator using Gemini.
+    Conversational moving estimator using Gemini. 
     LLM handles extraction, reasoning, and cost estimation.
     session_state only maintains conversation memory.
     """
@@ -78,6 +78,8 @@ CRITICAL: Do NOT use 0 km unless pickup and dropoff are the same location.
 ### COST FORMULA (with CORRECT distance)
 total = base + (distance_km × 0.80) + (labor_mins × labor_rate)
 labor_mins = 30 min minimum + (items_complexity × time_per_item)
+
+
 
 ### OUTPUT FORMAT
 
@@ -158,22 +160,24 @@ Great! Complete your booking here: http://localhost:3000/book
 
 # --- TEST RUNNER (How your Backend calls it) ---
 
-if __name__ == "__main__":
-    # INITIAL STATE (This would be stored in your Database/Redis)
-    session = {
-        "fields": {}, 
-        "calculation": None, 
-        "status": "collecting"
-    }
+# if __name__ == "__main__":
+#     # INITIAL STATE (This would be stored in your Database/Redis)
+#     session = {
+#         "fields": {}, 
+#         "calculation": None, 
+#         "status": "collecting"
+#     }
     
-    print("🚀 Digaxy AI Engine Online")
+#     print("🚀 Digaxy AI Engine Online")
     
-    while True:
-        user_in = input("\nYou: ")
-        if user_in.lower() in ["exit", "quit"]: break
+#     while True:
+#         user_in = input("\nYou: ")
+#         if user_in.lower() in ["exit", "quit"]: break
         
-        # The single call
-        reply, session = run_digaxy_ai(user_in, session)
+#         # The single call
+#         reply, session = run_digaxy_ai(user_in, session)
         
-        print(f"\nAssistant: {reply}")
-        # print(f"\n[DEBUG STATE]: {json.dumps(session['fields'], indent=2)}")
+#         print(f"\nAssistant: {reply}")
+#         # print(f"\n[DEBUG STATE]: {json.dumps(session['fields'], indent=2)}")
+        
+#     # labor_mins = max(30, distance_km × 0.6)  # Dynamic based on distance: ~100 km/h average speed
